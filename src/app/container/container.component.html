@@ -1,0 +1,18 @@
+<header>
+    <h1>Tic-Tac-Toe</h1>
+</header>
+
+<h2>Current Player: <span [ngClass]="currentPlayer=='Player X' ? 'playerX' : 'playerO'">{{currentPlayer}}</span></h2>
+
+<div class="container">
+    <div *ngFor="let tile of tiles; let index=index" 
+            [ngClass]="tile.includes('X') ? 'playerX' : 'playerO'" 
+            class="tile" 
+            (click)="tick(index)"
+            >
+            {{tile}}
+        </div>
+    </div>
+    <div class="btn_container">
+        <button class="btn" color="accent" mat-raised-button >Restart New Game</button>
+    </div>

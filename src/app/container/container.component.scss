@@ -1,0 +1,35 @@
+h1,h2{
+text-align: center;
+}
+
+.tile{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8em;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,10em);
+    grid-template-rows: repeat(3,10em);
+}
+.playerX {
+    color: #09C372;
+}
+
+.playerO {
+    color: #498AFB;
+}
+.btn_container{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin-top: 20px;
+
+}
+.mat-mdc-raised-button{
+--mdc-protected-button-container-color: #09C372;
+}
