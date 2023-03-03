@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 
 
@@ -76,9 +76,13 @@ export class ContainerComponent {
       this.openDialog()
     }
     let roundDraw= !this.tiles.includes('')
-    if(roundDraw){
+    if(roundDraw && !roundWon){
       this.winner="The game ended with draw"
       this.openDialog()
   }
 }
+resetGame(){
+  this.tiles = ['', '', '', '', '', '', '', '', ''];
+}
+
 }

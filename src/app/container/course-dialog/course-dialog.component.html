@@ -1,9 +1,9 @@
-
 <mat-dialog-content>
     <p [ngClass]="data.name=='The winner is Player X' ? 'playerX': 'playerO' ">
         {{data.name}}
     </p>
+
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button color="primary" mat-raised-button  (click)="newGame()">New Game</button>
+    <button color="primary" mat-raised-button (click)="newGame()">New Game</button>
 </mat-dialog-actions>
